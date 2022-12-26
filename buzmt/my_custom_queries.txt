@@ -1,0 +1,33 @@
+### BASH ###
+python manage.py shell
+
+### PYTHON ###
+from django.contrib.auth.models import User
+from blog.models import Employee
+user = User.objects.get(username='oumar')
+
+#create
+employee = Employee(lastName='***', firstName='***', activeInd = '*')
+employee.save()
+
+all_employees = Employee.objects.all()
+
+Employee.objects.filter(activeInd='Y')
+
+Employee.objects.order_by('lastName')
+
+employee_ = Employee.objects.get(employeeId=1)
+
+employee_.delete()
+
+### SQL ###
+
+
+### JAVASCRIPT ###
+
+
+### HTML ###
+
+
+### CSS ###
+

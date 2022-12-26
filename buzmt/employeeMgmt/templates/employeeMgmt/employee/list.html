@@ -1,0 +1,15 @@
+{% extends "employeeMgmt/base.html" %}
+{% block title %}Gestion du personel{% endblock %}
+{% block content %}
+<h1>Liste complete des employes:</h1>
+    {% for emp in employees %}
+    <h2>
+    <!-- <a href="{% url 'employeeMgmt:employee_detail' emp.employeeId %}"> -->
+    <!-- {{ emp.lastName }} -->
+    </a>
+    </h2>
+        <p class="date">
+        Details a propos de: <b> {{ emp.lastName }}, {{ emp.firstName }} --- No. d'employe: {{emp.employeeId}} </b>
+        </p>
+    {% endfor %}
+{% endblock %}
